@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>33de7fd0-6057-43c1-b090-7a0626614634</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
+
+		<PackageReference Include="Serilog.Sinks.Seq" Version="5.1.1" />
+		<PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UCondo.Core\UCondo.Core.csproj" />
+		<ProjectReference Include="..\UCondo.MessageBus\UCondo.MessageBus.csproj" />
+		<ProjectReference Include="..\UCondo.WebAPI.Core\UCondo.WebAPI.Core.csproj" />
+	</ItemGroup>
+
+</Project>
